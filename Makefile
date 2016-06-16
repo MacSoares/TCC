@@ -1,4 +1,4 @@
-TARGET = TCC_FGA.pdf
+TARGET = TCC_Macario.pdf
 
 BIBTEX = bibtex
 LATEX = latex

@@ -1,0 +1,11 @@
+
+Sistemas de detecção de intrusão, ou Intrusion Detection Systems (\textit{IDS}), são sistemas capazes de detectar atividades suspeitas em pacotes de dados a partir da analise de regras de uma base de conhecimento. Existem basicamente dois tipos de \textit{IDS}'s, o primeiro baseado em detecção por assinatura e o segundo baseado em detecção por anomalias.
+
+\begin{itemize}
+    \item O \textit{IDS} baseado em detecção por assinatura funcionam da seguinte maneira: o software busca em sua base de dados de assinaturas suspeitas, pelas assinaturas recebidas nos pacotes de dados, caso ele encontre, o pacote é marcado como malicioso. \cite{rehman2003intrusion}
+    \item O \textit{IDS} baseado em detecção por anomalia funciona da seguinte maneira: a partir da leitura de muitos pacotes de fuloxs, o sistema obtem um padrão de comportamento das atividades, no momento em que um pacote se comporta de maneira diferente o \textit{IDS} capta essa diferença e a trata como anomalia, marcando o pacote. \cite{debar2000introduction}
+\end{itemize}
+
+
+Entretanto este tipo de sistema baseado em assinaturas tem o problema de que a cada vez que um novo tipo de ataque é feito é necessária a atualização das regras de comparação, isso gera um grande esforço para que sejam atualizadas essa base de regras e a base de dados, o que pode se tornar mais crítico com a demora para estas atualizações. Outro problema associado a \textit{IDS}'s é que normalmente eles somente emitem sinais de que um pacode pode conter uma atividade maliciosa, e não chega a categorizá-la.
+
