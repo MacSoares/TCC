@@ -1,2 +1,40 @@
 \part{Resultados}
 \chapter[Resultados]{Resultados}
+
+    De acordo com a proposta de \textit{feature engineering} apresentada e utilizando uma amostra de dados de fluxos de rede este capítulo apresentará os resultados atingidos até esta etapa do trabalho.
+
+    \section{Features}
+        Como no modelo de dados utilizado para definição das \textit{features} é uma lista de dados retornada por uma consulta em um banco de dados, as \textit{features} definidas para representar um fluxo de dados, que poderá ser definido como malicioso ou não, serão expostas com a mesma nomenclatura do retorno da consulta:
+        \\
+        \begin{lstlisting}
+          column=flow:avg_packet_size;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=flow:bytes;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=flow:detected_protocol;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=flow:packets;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=event:classification_id;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=event:priority_id;
+        \end{lstlisting}
+
+        \begin{lstlisting}
+          column=event:signature_id.
+        \end{lstlisting}
+
+
+        Estas \textit{features} foram escolhidas pois elas definem um fluxo comum, no caso da leitura e aprendizagem de column=flow , e sempre que no mesmo registro a coluna column=event aparecer, para o processo de aprendizado significará que este é um tipo de fluxo que deverá ser marcado como malicioso, e é basicamente definido pelas \textit{features} escolhidas.
+
+        Os próximos passos seguindo o conceito de \textit{feature engineering} seriam o treinamento e avaliação deste modelo, que neste momento ainda não podem ser completos pois esta definição, durante o desenvolvimento deste trabalho, não é somente para ser aplicada nos conceitos de ML, mas para fazer a separação dos dados e treinar uma RNA, que ainda será produzida.
