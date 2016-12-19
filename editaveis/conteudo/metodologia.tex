@@ -10,41 +10,13 @@ Tendo como meta a definição de um modelo de ML para ser aplicada em uma RNA a 
     Sendo assim os passos a serem seguidos para a construção do modelo inicial são:
 
     \begin{itemize}
-        \item Pré-processamento dos dados: \\ Neste primeiro passo, é montado o modelo de dados de treinamento que será usado para apresentação e utilização dos dados. Para isso é necessário encontrar uma corelação entre os dados de entrada e o dado a ser atingido pelo processo de aprendizado. A partir do momento que a corelação é encontrada, os dados devem ser dispostos de modo que facilite sua visualização e uso, sendo assim de acordo com \cite{brink2015}, é recomendado que se convertam os dados categóricos (normamente textuais) em dados numéricos, para facilitar seu uso. Sendo assim foram escolhidas algumas características retiradas dos dados históricos que definem um fluxo comum para que se inicie o treinamento. As características são:
-        \\
-        \begin{lstlisting}
-          column=flow:avg_packet_size;
-        \end{lstlisting}
+        \item Pré-processamento dos dados: \\ Neste primeiro passo, é montado o modelo de dados de treinamento que será usado para apresentação e utilização dos dados. Para isso é necessário encontrar uma corelação entre os dados de entrada e o dado a ser atingido pelo processo de aprendizado. A partir do momento que a corelação é encontrada, os dados devem ser dispostos de modo que facilite sua visualização e uso, sendo assim de acordo com \cite{brink2015}, é recomendado que se convertam os dados categóricos (normamente textuais) em dados numéricos, para facilitar seu uso. Nesta faze se aplica o processo \textit{Linear Forward Selection}.
 
-        \begin{lstlisting}
-          column=flow:bytes;
-        \end{lstlisting}
-
-        \begin{lstlisting}
-          column=flow:detected_protocol;
-        \end{lstlisting}
-
-        \begin{lstlisting}
-          column=flow:packets;
-        \end{lstlisting}
-
-        \begin{lstlisting}
-          column=event:classification_id;
-        \end{lstlisting}
-
-        \begin{lstlisting}
-          column=event:priority_id;
-        \end{lstlisting}
-
-        \begin{lstlisting}
-          column=event:signature_id.
-        \end{lstlisting}
-
-        \item Definição das camadas da rede: \\ Tendo como base que existem 7 características de entrada, a camada de entrada da rede possuirá 7 neurônios. A camada de saída possuirá apenas um neurônio, visto que a resposta que se deseja é positiva ou negativa para um determinado fluxo. E a camada escondida possuirá 4 neurônios, calculados a partir da média aritmética entre as camadas de entrada e saída.
+        \item Definição das camadas da rede: \\ Tendo como base a quanidade de características extraídas pelo modelo de seleção, a camada de entrada da rede possuirá um neurônio para cada característica de entrada escolhida. A camada de saída possuirá apenas um neurônio, visto que a resposta que se deseja é positiva ou negativa para um determinado fluxo. E a camada escondida possuirá uma quantidade de neurônios calculados a partir da média aritmética entre as camadas de entrada e saída.
 
         \item Treinamento do modelo: \\ O modelo proposto deve passar por um breve treinamento para que os erros sejam corrigidos antes que a rede comece a rebeber dados para serem analisados.
 
-        \item Avaliar o modelo: \\ Uma vez com o modelo pronto é necessário avaliar a aplicabilidade do modelo em vista dos dados que se querem atingir. Um exemplo simples de avaliação é a comparação dos dados que deveriam ter sido atingidos com os dados preditos pelo modelo.
+        \item Avaliar o modelo: \\ Uma vez com o modelo pronto é necessário avaliar a aplicabilidade do modelo em vista da acurácia obtida em relação a quantidade de reconhecimentos feitos em uma base de dados controlada e com um número conhecido de dados que representam fluxos maliciosos.
 
     \end{itemize}
 

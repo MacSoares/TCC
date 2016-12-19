@@ -14,6 +14,21 @@ As duas fases descritas podem ser observadas na figura a seguir:
         \label{fig05}
             \includegraphics[keepaspectratio=true, scale=0.4]{editaveis/images/backprop.eps}
         \caption{Propagação de sinais de entrada e erros no \textit{Backpropagation}.}
-        Fonte : \url{https://goo.gl/o7IGy4}
+        Fonte : Adaptado de \url{https://goo.gl/o7IGy4}
 \end{figure}
+
+O pseudo algorítmo a seguir descreve uma maneira genérica de funcionamento do \textit{backpropagation} :
+
+\begin{enumerate}[noitemsep]
+    \item Inicialização dos pesos de todos os nós da rede;
+    \item Inicializar o padrão de entrara e sua respectiva saída esperada;
+    \item Iniciar propagação do padrão por cada camada da rede para que seja calculada a saída em cada nó (como mostrado na figura 5);
+    \item Comparar a saída esperada com a obtida através da rede e calcular o erro cometido na camada de saída;
+    \item Atualizar os pesos dos nós na camada de saída com base no erro calculado;
+    \item Repetir até chegar à camada de entrada:
+        \begin{itemize}[noitemsep]
+            \item Calcular o erro cometido por cada nó da camada anterior e ponderar pelo erro do nó da camada atual e dos nós seguintes;
+        \end{itemize}
+    \item Repetir os passos 2, 3, 4, 5 e 6 até obter um erro mínimo ou até atingir um dado número de iterações.
+\end{enumerate}
 
