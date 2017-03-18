@@ -1,0 +1,34 @@
+\textit{Backpropagation} é um algorítmo de aprendizagem normalmente aplicado a MLP's que visa a aprendizagem baseada em correção de erros. Isso ocorre devido à retropropagação dos erros de saída de uma RNA pelas camadas anteriores, para que assim sejam balanceados os pesos de entrada da rede.
+Este algorítmo possui três fases distintas:
+
+\begin{itemize}
+    \item Fase 1: Propagação dos sinais \\ Os sinais são propagados juntamente com os valores de entrada por todos os neurônios da rede a partir da entrada de dados até a camada de saída.
+    \item Fase 2: Cálculo dos erros \\ Os erros são calculados nos neurônios de saída da rede para que sejam retropropagados.
+    \item Fase 3: Retropropagação dos erros \\ Os erros que são encontrados nas camadas de saída, são propagados de volta para as camadas anteriores rebalanceando os pesos de entrada nas camadas superiores da rede. \cite{netto2006} Dessa forma a rede poderá chegar a resultados mais exatos nas próximas interações.
+\end{itemize}
+
+As duas fases descritas podem ser observadas na figura a seguir:
+
+\begin{figure}[ht]
+        \centering
+        \label{fig05}
+            \includegraphics[keepaspectratio=true, scale=0.4]{editaveis/images/backprop.eps}
+        \caption{Propagação de sinais de entrada e erros no \textit{Backpropagation}.}
+        Fonte : Adaptado de \url{https://goo.gl/o7IGy4}
+\end{figure}
+
+O pseudo algorítmo a seguir descreve uma maneira genérica de funcionamento do \textit{backpropagation} :
+
+\begin{enumerate}[noitemsep]
+    \item Inicialização dos pesos de todos os nós da rede;
+    \item Inicializar o padrão de entrara e sua respectiva saída esperada;
+    \item Iniciar propagação do padrão por cada camada da rede para que seja calculada a saída em cada nó (como mostrado na figura 5);
+    \item Comparar a saída esperada com a obtida através da rede e calcular o erro cometido na camada de saída;
+    \item Atualizar os pesos dos nós na camada de saída com base no erro calculado;
+    \item Repetir até chegar à camada de entrada:
+        \begin{itemize}[noitemsep]
+            \item Calcular o erro cometido por cada nó da camada anterior e ponderar pelo erro do nó da camada atual e dos nós seguintes;
+        \end{itemize}
+    \item Repetir os passos 2, 3, 4, 5 e 6 até obter um erro mínimo ou até atingir um dado número de iterações.
+\end{enumerate}
+
