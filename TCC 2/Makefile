@@ -9,7 +9,7 @@ VERSION = 0.1.0
 
 FIXOS_DIR = fixos
 FIXOS_SOURCES = informacoes.tex novosComandos.tex fichaCatalografica.tex \
-		folhaDeAprovacao.tex pacotes.tex comandos.tex setup.tex	\
+		folhaDeAprovacao.tex pacotes.tex setup.tex	\
 		listasAutomaticas.tex indiceAutomatico.tex
 
 FIXOS_FILES = $(addprefix $(FIXOS_DIR)/, $(FIXOS_SOURCES))
