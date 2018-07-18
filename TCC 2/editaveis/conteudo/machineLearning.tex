@@ -1,14 +1,12 @@
-Aprendizado de máquina (ou \textit{Machine learning} - ML) é uma sub área da inteligência artificial voltada à otimizar critérios de desempenho de acordo com análise de dados e ocorrências passadas \cite{alpaydin2010}. Uma das características mais marcantes da ML é a análise de conjuntos de dados para automatizar o desenvolvimento de modelos analíticos para suas funcionalidades, isso quer dizer que de acordo com essas análises e com dados de ocorrências já conhecidas por uma aplicação baseada em ML, o aprendizado possibilita às aplicações reagirem de maneira autônoma à eventualidades para as quais não foram programadas.
-
-Aprendizado de máquina normalmente é utilizado em duas situações que podem ser enxergadas pela análise do problema \cite{shalev2014}:
+Aprendizado de máquina (ou \textit{Machine learning} - ML) é uma sub área da inteligência artificial voltada à otimizar critérios de desempenho de acordo com análise de dados e ocorrências passadas \cite{alpaydin2010}. Uma das características mais marcantes da ML é a análise de conjuntos de dados para automatizar o desenvolvimento de modelos analíticos para suas funcionalidades, isso quer dizer que de acordo com essas análises e com dados de ocorrências já conhecidas por uma aplicação baseada em ML, o aprendizado possibilita às aplicações reagirem de maneira autônoma à eventualidades para as quais não foram programadas. Aprendizado de máquina normalmente é utilizado em duas situações que podem ser enxergadas pela análise do problema \cite{shalev2014}:
 
 \begin{itemize}
-    \item Complexidade elevada do problema: \\ Por exemplo, tarefas rotineiras que seres humanos executam, mas que para serem programadas o algorítmo teria uma complexitade enorme como dirigir ou reconhecer imagens. Outro exemplo é a necessidade de um processamento de uma massa de dados muito grande.
+    \item Complexidade elevada do problema: \\ Por exemplo, tarefas rotineiras que seres humanos executam, mas que para serem programadas o algoritmo teria uma complexitade enorme como dirigir ou reconhecer imagens. Outro exemplo é a necessidade de um processamento de uma massa de dados muito grande.
     \item Necessidade de adaptabilidade do sistema: \\ Por exemplo, detecção de diversos tipos de \textit{spam}, para marcar mensagens. \\
 \end{itemize}
 
 \subsection{Fluxo de trabalho}
-    O fluxo de trabalho básico de ML consiste em duas fases, a de construção de um modelo e a de predição. Na primeira são utilizados dados históricos (ou dados de treinamento) para um ciclo de modelagem onde será definido, evoluido e otimizado um modelo de dados para que o algorítmo o consuma, realizando assim um tipo de aprendizado como mostrado na Figura 6. É a partir deste modelo otmizado que o algoritmo vai conseguir fazer predições sobre novos dados ou ainda categorizações.
+    O fluxo de trabalho básico de ML consiste em duas fases, isto é, a de construção de um modelo e a de predição. Na primeira são utilizados dados históricos (ou dados de treinamento) para um ciclo de modelagem onde será definido, evoluido e otimizado um modelo de dados para que será utilizado para alimentar o algoritmo, realizando assim um tipo de aprendizado como mostrado na Figura 6. É a partir deste modelo otmizado que o algoritmo vai conseguir fazer predições sobre novos dados ou ainda categorizações \cite{brink2015}.
 
     \begin{figure}[ht]
             \centering
@@ -20,9 +18,9 @@ Aprendizado de máquina normalmente é utilizado em duas situações que podem s
 
 \subsection{Tipos de aprendizado}
     \begin{itemize}
-        \item Supervisionado: No aprendizado supervisionado, uma massa de dados de treinamento é rodada pelo programa possuindo \textit{labels} características que as classificam, e no momento em que um novo dado aparece sem essa \textit{label} (dado de teste), espera-se que o programa seja capaz de predizer qual a classificação do dado \cite{brink2015}.
+        \item Supervisionado: No aprendizado supervisionado, uma massa de dados de treinamento é consumida pelo programa possuindo \textit{labels} características que as classificam. Além disso, no momento em que um novo dado aparece sem essa \textit{label} (dado de teste), espera-se que o programa seja capaz de predizer qual a classificação do dado \cite{brink2015}.
         \item Não Supervisionado: No aprendizado não supervisionado, a massa de dados de treinamento é a mesma dos dados de teste, pois estes dados não possuem \textit{labels} que distinguem características. Dessa forma o programa reconhece as características a cada novo dado entregue e começa a fazer a separação de forma autônoma \cite{chao2011}.
-        \item Reforço: No aprendizado por reforço, o programa ao receber um sinal de entrada dispara uma ação que muda o valor deste sinal. Assim que o valor do sinal de entrada é alterado e devolvido, mudando assim o estado do ambiente de aprendizagem. A partir disso é recebida uma nova entrada para disparar outra ação que novamente devolverá um valor diferente alterando o estado do ambiente, com a intenç!ao de sempre se aumentar os valores de interação \cite{kaelbling1996}.
+        \item Reforço: No aprendizado por reforço, o programa ao receber um sinal de entrada dispara uma ação que muda o valor deste sinal. Assim que o valor do sinal de entrada é alterado e devolvido, mudando assim o estado do ambiente de aprendizagem. A partir disso é recebida uma nova entrada para disparar outra ação que novamente devolverá um valor diferente alterando o estado do ambiente, com a intenção de sempre se aumentar os valores de interação \cite{kaelbling1996}.
     \end{itemize}
 
 % \subsection{Seleção de Características}
