@@ -7,14 +7,14 @@ Este algoritmo possui três fases distintas \cite{netto2006}:
     \item Fase 3: Retropropagação dos erros \\ Os erros que são encontrados nas camadas de saída, são propagados de volta para as camadas anteriores rebalanceando os pesos de entrada nas camadas superiores da RNA. Dessa forma, a RNA poderá chegar a resultados mais exatos nas próximas interações.
 \end{itemize}
 
-As três fases descritas podem ser observadas na Figura 5:
+As três fases descritas podem ser observadas na Figura 8.
 
 \begin{figure}[ht]
         \centering
-        \label{fig05}
+        \label{fig08}
             \includegraphics[keepaspectratio=true, scale=0.4]{editaveis/images/backprop.eps}
         \caption{Propagação de sinais de entrada e erros no \textit{Backpropagation}.}
-        Fonte : Adaptado de \url{https://goo.gl/o7IGy4}
+        Fonte : \cite{buranajun2007}
 \end{figure}
 
 O pseudo algoritmo a seguir descreve uma maneira genérica de funcionamento do \textit{backpropagation}:

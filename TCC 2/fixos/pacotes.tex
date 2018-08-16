@@ -1,4 +1,4 @@
-\documentclass[12pt,openright,twoside,a4paper,english,french,spanish]{abntex2}
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish]{abntex2}
 
 \usepackage{cmap}
 \usepackage{lmodern}
@@ -18,3 +18,28 @@
 \usepackage{listings}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{float}
+
+\lstset{
+    language=Python, %% Troque para PHP, C, Java, etc... bash é o padrão
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+	stringstyle=\color{black},
+	commentstyle=\color{red},
+    numberstyle=\footnotesize,
+    numbers=left,
+    backgroundcolor=\color{gray!10},
+    frame=single,
+    tabsize=2,
+    rulecolor=\color{black!30},
+    title=\lstname,
+    escapeinside={\%*}{*)},
+    breaklines=true,
+    breakatwhitespace=true,
+    framextopmargin=2pt,
+    framexbottommargin=2pt,
+    extendedchars=true,
+    inputencoding=utf8,
+    xleftmargin=0pt,
+}
